@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Banana Clicker 🍌</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <h1>🍌 Banana Clicker v1.1.4 🍌</h1>
+    <p id="score">Bananas : 0</p>
+    <button onclick="increment()">🍌 Clique la banane !</button>
+    <button onclick="triggerAd()">10000</button>
+
+    <div class="upgrade">
+      <h2>🐒 Améliorations</h2>
+
+      <div class="upgrade-item">
+        <p>Singes 🐵 : <span id="monkeys">0</span> | Coût : <span id="monkeyCost">50</span></p>
+        <button onclick="buyMonkey()">Acheter un singe</button>
+      </div>
+
+      <div class="upgrade-item">
+        <p>Planteurs 🌱 : <span id="planters">0</span> | Coût : <span id="planterCost">100</span></p>
+        <button onclick="buyPlanter()">Acheter un planteur</button>
+      </div>
+
+      <div class="upgrade-item">
+        <p>Bananiers magiques ✨ : <span id="magicBananas">0</span> | Coût : <span id="magicCost">500</span></p>
+        <button onclick="buyMagic()">Acheter un bananier magique</button>
+        <button id="smallButton" onclick="loseBanas()">Petit Bouton</button>
+      </div>
+    </div>
+
+    <div class="achievements">
+      <h2>🏆 Achievements</h2>
+      <ul id="achievementsList"></ul>
+    </div>
+  </div>
+
+  <!-- Pop-up et overlay -->
+  <div id="blockOverlay"></div>
+  <div id="popup" class="popup">
+    <img id="popupImage" src="" alt="" />
+    <video id="popupVideo" style="display:none;"></video>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

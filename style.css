@@ -1,0 +1,169 @@
+/* ===== BODY ===== */
+body {
+  background: linear-gradient(135deg, #fef08a, #facc15);
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  display: flex;
+  justify-content: center; /* centre horizontalement */
+  align-items: flex-start; /* en haut de la page */
+  min-height: 100vh;
+  margin: 0;
+  padding-top: 20px; /* espace en haut */
+}
+
+
+/* ===== CARTE PRINCIPALE ===== */
+.card {
+  background-color: #fffbe6;
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  border: 4px dashed #facc15;
+}
+
+/* ===== TITRE ET SCORE ===== */
+h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #92400e;
+}
+
+#score {
+  font-size: 22px;
+  margin-bottom: 30px;
+  color: #713f12;
+}
+
+/* ===== BOUTONS ===== */
+button {
+  background-color: #fbbf24;
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  font-size: 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  margin-top: 10px;
+}
+
+button:hover { background-color: #f59e0b; }
+button:active { transform: scale(0.95); }
+
+button:nth-of-type(2) {
+  font-size: 12px;
+  padding: 6px 12px;
+  background-color: #10b981; /* vert */
+}
+
+/* ===== UPGRADES ===== */
+.upgrade {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 2px dashed #facc15;
+}
+
+.upgrade h2 {
+  color: #78350f;
+  margin-bottom: 10px;
+}
+
+.upgrade-item {
+  margin: 20px 0;
+  padding: 10px;
+  background-color: #fff7c2;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.upgrade-item p {
+  margin: 5px 0;
+  color: #6b3f00;
+  font-weight: bold;
+}
+
+/* ===== PETIT BOUTON ===== */
+#smallButton {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  font-size: 12px;
+  border-radius: 50%;
+  background-color: #fbbf24;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.1s;
+}
+
+#smallButton:hover { background-color: #f59e0b; }
+#smallButton:active { transform: scale(0.95); }
+
+/* ===== ACHIEVEMENTS ===== */
+.achievements {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.achievements h2 {
+  color: #92400e;
+  margin-bottom: 10px;
+}
+
+.achievements ul {
+  list-style: none;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.achievements li {
+  margin: 5px 0;
+  background-color: #fff7c2;
+  padding: 5px 10px;
+  border-radius: 8px;
+  color: #6b3f00;
+  font-weight: bold;
+}
+
+/* ===== POPUP ===== */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 200, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.popup.show { visibility: visible; opacity: 1; }
+
+.popup img, .popup video {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 16px;
+}
+
+/* ===== OVERLAY ===== */
+#blockOverlay {
+  display: none;
+  position: fixed;
+  top:0; left:0;
+  width:100vw;
+  height:100vh;
+  background: rgba(255,255,255,0.8);
+  z-index: 998;
+}
